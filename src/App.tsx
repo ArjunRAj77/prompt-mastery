@@ -101,7 +101,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-[#F7F7FA] dark:bg-[#0B0F19] transition-colors duration-300 font-sans selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-[#F7F7FA] dark:bg-[#0B0F19] transition-colors duration-300 font-sans selection:bg-violet-500/30">
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}

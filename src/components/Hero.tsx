@@ -16,7 +16,7 @@ export default function Hero() {
             The Ultimate Collection
           </span>
           <h1 className="text-5xl md:text-7xl font-display font-bold tracking-tight text-slate-900 dark:text-white mb-6">
-            Master the <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-600">language of AI.</span>
+            Master the <span className="text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-500">language of AI.</span>
           </h1>
           <p className="max-w-2xl mx-auto lg:mx-0 text-lg md:text-xl text-slate-600 dark:text-slate-300 leading-relaxed">
             A curated gallery of elite prompts for builders, creators, and operators. Unlock the full potential of LLMs with precision and style.

@@ -43,11 +43,11 @@
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C5CE7] to-[#00BFA6];
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-violet-600 to-fuchsia-500;
   }
   
   .dark .text-gradient {
-    @apply from-[#8B7CFF] to-[#22D3EE];
+    @apply from-violet-400 to-fuchsia-400;
   }
 
   .glass-icon {
