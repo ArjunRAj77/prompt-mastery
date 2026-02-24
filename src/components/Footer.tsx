@@ -9,12 +9,12 @@ export default function Footer() {
             P
           </div>
           <span className="font-display font-bold text-xl tracking-tight text-slate-900 dark:text-white">
-            Prompt Master
+            Prompt Mastery
           </span>
         </div>
         
         <p className="text-slate-500 dark:text-slate-400 text-sm">
-          © {new Date().getFullYear()} Prompt Master. All rights reserved.
+          © {new Date().getFullYear()} Vibe Coded By Arjun.
         </p>
 
         <div className="flex gap-4">
