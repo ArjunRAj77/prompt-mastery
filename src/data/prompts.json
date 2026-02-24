@@ -98,5 +98,326 @@
     "agents": ["Claude", "Gemini"],
     "tags": ["Summary", "Management", "Productivity"],
     "tips": "Indicate the maximum word count if needed."
+  },
+  {
+    "id": "11",
+    "title": "Deep Multi-Source Research Analyst",
+    "description": "Produce structured, high-quality research briefs with strategic insight.",
+    "category": "Business",
+    "prompt": "Act as a senior research analyst with expertise in synthesizing complex information from multiple domains.\n\nYour task is to produce a structured, high-quality research brief on the following topic:\n\n[TARGET TOPIC]\n\nFollow this exact workflow:\n\nSTEP 1 — Clarify Scope  \nAsk up to 3 sharp clarifying questions if the topic is ambiguous. If the topic is clear, proceed immediately.\n\nSTEP 2 — Executive Summary  \nProvide a concise executive summary (max 200 words) highlighting the most critical insights.\n\nSTEP 3 — Key Themes  \nBreak the topic into 4–6 major themes or dimensions. For each theme:\n- Explain why it matters\n- Provide supporting reasoning\n- Include real-world examples where possible\n\nSTEP 4 — Contrarian or Emerging Signals  \nIdentify:\n- Under-discussed risks\n- Emerging trends\n- Non-obvious insights\n- Minority viewpoints\n\nSTEP 5 — Strategic Implications  \nExplain what decision-makers should DO with this information.\n\nSTEP 6 — Further Research Directions  \nList 5 smart follow-up questions worth investigating.\n\nOutput requirements:\n- Use clear section headers\n- Be precise and analytical, not fluffy\n- Prefer structured thinking over long paragraphs\n- Write for an intelligent but time-constrained reader",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["research", "analysis", "strategy"],
+    "tips": "Best used when you provide a clearly scoped topic for deeper insights."
+  },
+  {
+    "id": "12",
+    "title": "Prompt Refiner and Optimizer",
+    "description": "Transform weak prompts into high-performance production prompts.",
+    "category": "Coding",
+    "prompt": "You are an expert prompt engineer specializing in transforming mediocre prompts into high-performance, production-grade prompts.\n\nYour task is to improve the following prompt:\n\n[PASTE ORIGINAL PROMPT]\n\nFollow this enhancement framework:\n\n1. Diagnose Problems  \nBriefly identify weaknesses such as:\n- Vagueness\n- Missing constraints\n- Lack of structure\n- Ambiguous output expectations\n\n2. Clarify Intent  \nInfer the user's true goal and restate it clearly.\n\n3. Produce an Optimized Prompt  \nRewrite the prompt to be:\n- More specific\n- Better structured\n- Role-driven\n- Constraint-aware\n- Output-formatted\n\n4. Add Optional Power-Ups  \nSuggest 2–3 optional additions that could further improve results.\n\nFormatting rules:\n- Use clean sections\n- Keep explanations concise\n- The improved prompt must be fully copy-paste ready",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["prompt engineering", "optimization"],
+    "tips": "Works best when you paste the full original prompt without trimming."
+  },
+  {
+    "id": "13",
+    "title": "High-Velocity Viral Content Generator",
+    "description": "Create algorithm-aware, high-engagement social media posts.",
+    "category": "Marketing",
+    "prompt": "Act as a world-class social media strategist who deeply understands platform psychology, algorithm behavior, and viral mechanics.\n\nYour objective is to create high-engagement content for:\n\nPlatform: [LinkedIn / X / Instagram / etc]  \nTopic: [TOPIC]  \nAudience: [TARGET AUDIENCE]  \nTone: [professional / bold / witty / etc]\n\nFollow this structured process:\n\nPHASE 1 — Hook Engineering  \nGenerate 5 scroll-stopping opening hooks. Each must use a different psychological trigger (curiosity, contrarian, urgency, authority, etc).\n\nPHASE 2 — Content Draft  \nWrite the full post optimized for:\n- Readability\n- Retention\n- Shareability\n- Platform-native style\n\nPHASE 3 — Engagement Boosters  \nProvide:\n- 3 strong CTA variants\n- 5 high-performing hashtag suggestions\n- 2 alternative headline angles\n\nPHASE 4 — Virality Analysis  \nBriefly explain why this post is likely to perform well.\n\nOutput rules:\n- Avoid generic advice\n- Use tight, punchy writing\n- Optimize for real-world performance, not theory",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["social media", "growth", "viral"],
+    "tips": "Specify the exact platform for best algorithm alignment."
+  },
+  {
+    "id": "14",
+    "title": "First-Principles Problem Deconstructor",
+    "description": "Break down complex problems using rigorous systems thinking.",
+    "category": "Business",
+    "prompt": "You are a first-principles thinker and systems strategist.\n\nYour task is to deeply analyze and deconstruct the following problem:\n\n[DESCRIBE PROBLEM]\n\nUse this structured reasoning framework:\n\n1. Problem Restatement  \nRewrite the problem clearly and precisely.\n\n2. Assumption Audit  \nList hidden assumptions that may be incorrect or untested.\n\n3. First-Principles Breakdown  \nReduce the problem to fundamental truths.\n\n4. System Map  \nIdentify key components, actors, and feedback loops involved.\n\n5. Solution Pathways  \nPropose 3 distinct solution approaches:\n- Conservative approach\n- Bold approach\n- Experimental approach\n\n6. Risk Analysis  \nFor each solution, identify major risks and failure modes.\n\n7. Recommended Next Step  \nProvide the single highest-leverage action to take immediately.\n\nStyle requirements:\n- Be structured and rigorous\n- Avoid motivational fluff\n- Prefer clarity over verbosity",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["critical thinking", "strategy"],
+    "tips": "Provide a well-described problem statement for best results."
+  },
+  {
+    "id": "15",
+    "title": "Production-Grade Code Review Expert",
+    "description": "Perform a rigorous senior-level code review across multiple dimensions.",
+    "category": "Coding",
+    "prompt": "Act as a senior software engineer performing a rigorous production code review.\n\nReview the following code:\n\n[PASTE CODE]\n\nAnalyze across these dimensions:\n\n1. Correctness  \n- Logical bugs  \n- Edge cases  \n- Error handling gaps  \n\n2. Performance  \n- Time complexity concerns  \n- Memory inefficiencies  \n- Unnecessary computations  \n\n3. Readability & Maintainability  \n- Naming quality  \n- Structure and modularity  \n- Code smells  \n\n4. Security Risks  \n- Injection risks  \n- Unsafe handling of input  \n- Sensitive data exposure  \n\n5. Scalability  \n- Behavior under load  \n- Concurrency concerns  \n- Future extensibility  \n\nOutput format:\n\n## Critical Issues  \n## Important Improvements  \n## Minor Suggestions  \n## Refactored Example (if helpful)\n\nBe direct, technical, and actionable.\nAvoid generic praise.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["code review", "engineering"],
+    "tips": "Include the full function or file context for more accurate review."
+  },
+  {
+    "id": "16",
+    "title": "Cinematic Image Prompt Generator",
+    "description": "Craft highly detailed, cinematic AI image generation prompts.",
+    "category": "Image Generation",
+    "prompt": "You are an expert AI image prompt designer specializing in cinematic, highly detailed visual generation.\n\nYour task is to create a premium image prompt based on:\n\nSubject: [SUBJECT]  \nStyle: [STYLE or leave blank]  \nMood: [MOOD]  \nEnvironment: [SETTING]  \nLighting: [LIGHTING STYLE]  \nAspect Ratio: [e.g., 16:9]\n\nFollow this structure:\n\n1. Core Scene Description  \nWrite a vivid, highly specific visual description.\n\n2. Artistic Style Layer  \nIncorporate appropriate artistic or photographic styles.\n\n3. Technical Enhancers  \nAdd camera details, lens type, depth of field, texture quality.\n\n4. Final Optimized Prompt  \nProvide one clean, copy-paste-ready prompt.\n\n5. Optional Variations  \nProvide 3 creative variations.\n\nBe visually precise and avoid generic descriptors.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["midjourney", "dalle", "stable diffusion"],
+    "tips": "Be very specific with subject and lighting for best image quality."
+  },
+  {
+    "id": "17",
+    "title": "Smart Notes Synthesizer",
+    "description": "Transform messy notes into structured, actionable knowledge.",
+    "category": "Productivity",
+    "prompt": "Act as a knowledge management expert who excels at transforming messy information into structured insight.\n\nProcess the following notes:\n\n[PASTE NOTES]\n\nProduce:\n\n1. Clean Summary  \nConcise but complete.\n\n2. Key Insights  \nBullet list of the most important takeaways.\n\n3. Knowledge Gaps  \nWhat is missing or unclear?\n\n4. Action Items  \nConcrete next steps derived from the notes.\n\n5. Memory Hooks  \nCreate 3 memorable one-line summaries.\n\nRules:\n- Remove redundancy\n- Preserve meaning\n- Prefer structured output\n- Do not add fluff",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["notes", "summarization"],
+    "tips": "Works best with raw, unedited notes rather than pre-summarized text."
+  },
+  {
+    "id": "18",
+    "title": "Authority Blog Post Composer ✍️",
+    "description": "Write deeply researched, SEO-aware long-form blog posts that build authority.",
+    "category": "Content Writing",
+    "prompt": "Act as a senior content strategist and SEO-focused long-form writer.\n\nYour task is to write a high-authority blog post on the following topic:\n\nTopic: [TOPIC]\nTarget Audience: [AUDIENCE]\nPrimary Keyword: [KEYWORD]\nDesired Tone: [e.g., expert but conversational]\n\nFollow this structure:\n\nSTEP 1 — Angle & Positioning  \nPropose a strong angle that differentiates this article from typical content.\n\nSTEP 2 — SEO Title Options  \nGenerate 5 compelling SEO titles (60 characters max).\n\nSTEP 3 — Article Outline  \nCreate a logical H2/H3 outline optimized for readability and search intent.\n\nSTEP 4 — Full Article Draft  \nWrite the full blog post with:\n- Strong hook introduction\n- Clear section flow\n- Practical examples\n- Actionable advice\n- Natural keyword placement (no stuffing)\n\nSTEP 5 — Conclusion  \nProvide a memorable closing with a soft call-to-action.\n\nSTEP 6 — Meta Description  \nWrite an SEO-friendly meta description under 155 characters.\n\nWriting rules:\n- Avoid fluff\n- Prefer clarity and authority\n- Use short paragraphs\n- Optimize for human readers first, SEO second",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["blog", "seo", "long-form"],
+    "tips": "Provide a specific keyword and audience for best SEO performance."
+  },
+  {
+    "id": "19",
+    "title": "Story-Driven Email Campaign Builder 📧",
+    "description": "Craft persuasive email campaigns using narrative psychology and conversion principles.",
+    "category": "Content Writing",
+    "prompt": "Act as an elite email copywriter who specializes in high-converting, story-driven campaigns.\n\nCreate an email campaign with the following inputs:\n\nGoal: [e.g., sell product, nurture leads]\nAudience: [TARGET AUDIENCE]\nOffer/Product: [DETAILS]\nTone: [friendly / premium / bold]\n\nFollow this framework:\n\nPHASE 1 — Subject Line Lab  \nGenerate 7 subject lines using different psychological triggers.\n\nPHASE 2 — Preview Text  \nWrite 3 preview text options that complement the subject.\n\nPHASE 3 — Email Body  \nStructure the email using:\n- Pattern-interrupt opening\n- Relatable story or insight\n- Value delivery\n- Soft but clear CTA\n\nPHASE 4 — CTA Variants  \nProvide 3 CTA button text options.\n\nPHASE 5 — Optimization Notes  \nExplain why this email should convert well.\n\nRules:\n- Avoid spammy language\n- Keep paragraphs short\n- Maintain natural conversational flow",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["email", "conversion", "copywriting"],
+    "tips": "Mention whether the audience is warm or cold for better tone calibration."
+  },
+  {
+    "id": "20",
+    "title": "Magnetic Landing Page Copy Generator 🚀",
+    "description": "Generate high-converting landing page copy with clear positioning and persuasion flow.",
+    "category": "Content Writing",
+    "prompt": "You are a world-class conversion copywriter.\n\nCreate high-converting landing page copy for the following:\n\nProduct/Service: [PRODUCT]\nTarget Audience: [AUDIENCE]\nPrimary Pain Point: [PAIN]\nUnique Advantage: [USP]\nTone: [e.g., premium, bold, friendly]\n\nStructure the output as follows:\n\nSECTION 1 — Hero Headlines  \nGenerate 5 powerful headline options and 3 subheadline options.\n\nSECTION 2 — Value Proposition  \nWrite a clear and compelling value proposition paragraph.\n\nSECTION 3 — Benefit Blocks  \nCreate 4 benefit sections. For each include:\n- Benefit title\n- Short explanation\n- Outcome for the user\n\nSECTION 4 — Social Proof Ideas  \nSuggest 3 types of social proof to include.\n\nSECTION 5 — Objection Handling  \nList top 5 user objections and write responses.\n\nSECTION 6 — CTA Section  \nWrite a strong closing CTA section.\n\nRules:\n- Be specific and concrete\n- Avoid generic hype\n- Focus on outcomes, not features\n- Maintain tight persuasive flow",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["landing page", "conversion", "sales"],
+    "tips": "Provide a sharp USP to dramatically improve results."
+  },
+  {
+    "id": "21",
+    "title": "Brand Voice Calibrator 🎯",
+    "description": "Analyze and replicate a consistent brand voice across new content.",
+    "category": "Content Writing",
+    "prompt": "Act as a brand voice expert and linguistic analyst.\n\nYour job is to analyze the brand voice from the sample content and then generate new content that perfectly matches it.\n\nBrand Samples:\n[PASTE SAMPLE TEXT]\n\nNew Content Goal:\n[DESCRIBE WHAT TO WRITE]\n\nFollow this process:\n\nSTEP 1 — Voice Analysis  \nIdentify:\n- Tone characteristics\n- Sentence style\n- Vocabulary patterns\n- Formality level\n- Emotional texture\n\nSTEP 2 — Voice Rules  \nCreate a short style guide for this brand voice.\n\nSTEP 3 — Generated Content  \nWrite the new content while strictly matching the voice.\n\nSTEP 4 — Consistency Check  \nBriefly explain why the new content matches the brand voice.\n\nRules:\n- Do not drift into generic tone\n- Mirror rhythm and style\n- Preserve brand personality",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["branding", "voice", "style"],
+    "tips": "Provide at least 2–3 strong writing samples for best voice matching."
+  },
+  {
+    "id": "22",
+    "title": "Long-Form Thought Leadership Builder 🧠",
+    "description": "Create insightful thought leadership pieces that build credibility and depth.",
+    "category": "Content Writing",
+    "prompt": "Act as a respected industry thought leader and strategic writer.\n\nWrite a thought leadership article on:\n\nTopic: [TOPIC]\nAudience: [AUDIENCE]\nPoint of View: [YOUR UNIQUE ANGLE]\nTone: [insightful / bold / analytical]\n\nStructure the piece as follows:\n\nPART 1 — Strong Opening Insight  \nStart with a sharp observation or contrarian insight.\n\nPART 2 — Context Setting  \nExplain the current landscape and why it matters.\n\nPART 3 — Deep Analysis  \nProvide original thinking, frameworks, or mental models.\n\nPART 4 — Practical Implications  \nExplain what leaders/operators should do next.\n\nPART 5 — Memorable Closing  \nEnd with a powerful forward-looking statement.\n\nWriting rules:\n- Avoid generic advice\n- Prioritize original thinking\n- Use confident but measured tone\n- Keep paragraphs tight and readable",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["thought leadership", "strategy", "authority"],
+    "tips": "Works best when you provide a strong or contrarian POV."
+  },
+  {
+    "id": "23",
+    "title": "Ultra-Realistic Portrait Generator 🎭",
+    "description": "Create hyper-detailed, photorealistic portrait prompts for AI image models.",
+    "category": "Image Generation",
+    "prompt": "You are an elite AI visual director specializing in ultra-photorealistic human portraits.\n\nGenerate a premium image prompt using the following inputs:\n\nSubject: [PERSON DESCRIPTION]\nEmotion: [EMOTION]\nEnvironment: [SETTING]\nLighting Style: [LIGHTING]\nCamera Style: [e.g., DSLR, cinematic]\nAspect Ratio: [e.g., 3:4]\n\nFollow this structure:\n\n1. Subject Detailing  \nDescribe facial features, expression, clothing, and posture with precision.\n\n2. Environment Context  \nAdd rich environmental details that enhance realism.\n\n3. Lighting Design  \nSpecify lighting direction, softness, color temperature.\n\n4. Camera & Lens Specs  \nInclude focal length, depth of field, sharpness level.\n\n5. Final Optimized Prompt  \nProvide one clean, copy-paste-ready prompt.\n\nRules:\n- Avoid generic phrases\n- Prioritize photorealism\n- Use cinematic detail density",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["portrait", "photorealistic", "cinematic"],
+    "tips": "Specify age, ethnicity, and mood for more accurate portraits."
+  },
+  {
+    "id": "24",
+    "title": "Fantasy World Scene Builder 🏰",
+    "description": "Generate richly detailed fantasy environment prompts.",
+    "category": "Image Generation",
+    "prompt": "Act as a fantasy concept art director.\n\nCreate a highly detailed fantasy scene based on:\n\nWorld Theme: [THEME]\nPrimary Subject: [SUBJECT]\n Mood: [MOOD]\nTime of Day: [TIME]\nArt Style: [STYLE]\nAspect Ratio: [RATIO]\n\nStructure your output:\n\n1. Scene Composition  \nDescribe foreground, midground, and background.\n\n2. Atmosphere & Mood  \nAdd weather, particles, environmental effects.\n\n3. Artistic Styling  \nApply appropriate fantasy art influences.\n\n4. Technical Enhancers  \nAdd rendering quality, texture fidelity, lighting polish.\n\n5. Final Prompt  \nProvide a single optimized prompt.\n\nMake the scene feel epic, immersive, and visually rich.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["fantasy", "environment", "concept art"],
+    "tips": "Mention specific fantasy elements like floating islands or ancient ruins."
+  },
+  {
+    "id": "25",
+    "title": "Product Hero Shot Composer 📦",
+    "description": "Design premium product photography prompts for marketing visuals.",
+    "category": "Image Generation",
+    "prompt": "You are a high-end product photography director.\n\nGenerate a premium product hero shot prompt for:\n\nProduct: [PRODUCT]\nBrand Personality: [BRAND STYLE]\nBackground Style: [BACKGROUND]\nLighting: [LIGHTING]\nCamera Angle: [ANGLE]\nAspect Ratio: [RATIO]\n\nProcess:\n\n1. Product Focus  \nDescribe product materials, finish, and positioning.\n\n2. Scene Styling  \nDefine background, props, and composition.\n\n3. Lighting Setup  \nSpecify studio lighting style and reflections.\n\n4. Camera Details  \nInclude lens type and depth of field.\n\n5. Final Prompt  \nOutput one clean optimized prompt.\n\nGoal: premium, advertisement-ready visual.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["product", "advertising", "studio"],
+    "tips": "Mention material types like matte, glass, or metallic."
+  },
+  {
+    "id": "26",
+    "title": "Anime Character Designer 🌸",
+    "description": "Generate detailed anime-style character prompts.",
+    "category": "Image Generation",
+    "prompt": "Act as a top-tier anime character designer.\n\nCreate a detailed anime character prompt using:\n\nCharacter Role: [ROLE]\nAppearance Traits: [TRAITS]\nEmotion: [EMOTION]\nOutfit Style: [OUTFIT]\nBackground: [SETTING]\nArt Style: [ANIME STYLE]\nAspect Ratio: [RATIO]\n\nStructure:\n\n1. Character Description  \nDetail hair, eyes, pose, expression.\n\n2. Outfit & Props  \nDescribe clothing and accessories.\n\n3. Scene Context  \nAdd environment and mood.\n\n4. Style Enhancers  \nInclude anime rendering details.\n\n5. Final Prompt  \nProvide one optimized prompt.\n\nEnsure strong anime aesthetic and clean visual focus.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["anime", "character", "illustration"],
+    "tips": "Mention specific anime substyles for better fidelity."
+  },
+  {
+    "id": "27",
+    "title": "Isometric Illustration Generator 🧩",
+    "description": "Create clean, modern isometric scene prompts.",
+    "category": "Image Generation",
+    "prompt": "You are a modern isometric illustration specialist.\n\nGenerate an isometric scene based on:\n\nScene Theme: [THEME]\nPrimary Elements: [ELEMENTS]\nColor Palette: [COLORS]\nStyle: [FLAT / SEMI-REALISTIC]\nAspect Ratio: [RATIO]\n\nProcess:\n\n1. Scene Layout  \nDescribe isometric composition clearly.\n\n2. Object Details  \nDefine shapes, materials, and spacing.\n\n3. Color Strategy  \nApply cohesive palette.\n\n4. Rendering Style  \nSpecify clean vector/isometric finish.\n\n5. Final Prompt  \nProvide one optimized prompt.\n\nKeep it clean, modern, and product-ready.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["isometric", "vector", "modern"],
+    "tips": "Works well for tech, SaaS, and dashboard visuals."
+  },
+  {
+    "id": "28",
+    "title": "Cinematic Landscape Generator 🌄",
+    "description": "Produce sweeping cinematic landscape prompts.",
+    "category": "Image Generation",
+    "prompt": "Act as a cinematic landscape director.\n\nCreate a breathtaking landscape prompt using:\n\nLocation Type: [LOCATION]\nSeason: [SEASON]\nTime of Day: [TIME]\nMood: [MOOD]\nCamera Style: [CINEMATIC STYLE]\nAspect Ratio: [RATIO]\n\nStructure:\n\n1. Wide Scene Description  \nPaint the full landscape vividly.\n\n2. Environmental Details  \nAdd weather, atmosphere, depth layers.\n\n3. Lighting & Color  \nDefine cinematic lighting and grading.\n\n4. Camera Specs  \nInclude focal length and depth.\n\n5. Final Prompt  \nProvide one polished prompt.\n\nAim for epic cinematic quality.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["landscape", "cinematic", "nature"],
+    "tips": "Golden hour or foggy conditions often improve results."
+  },
+  {
+    "id": "29",
+    "title": "Logo Concept Visualizer 🧠",
+    "description": "Generate creative logo concept prompts for AI image tools.",
+    "category": "Image Generation",
+    "prompt": "You are a senior brand identity designer.\n\nCreate a strong logo concept prompt for:\n\nBrand Name: [NAME]\nIndustry: [INDUSTRY]\nBrand Personality: [TRAITS]\nSymbol Ideas: [OPTIONAL]\nColor Direction: [COLORS]\nStyle: [MINIMAL / MODERN / LUXURY]\nAspect Ratio: [RATIO]\n\nProcess:\n\n1. Concept Direction  \nDescribe the core visual idea.\n\n2. Symbol & Form  \nDefine shapes and geometry.\n\n3. Typography Feel  \nDescribe font personality.\n\n4. Color Strategy  \nApply cohesive palette.\n\n5. Final Prompt  \nProvide one optimized prompt.\n\nKeep it clean and brand-ready.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["logo", "branding", "design"],
+    "tips": "Provide clear brand personality traits for better concepts."
+  },
+  {
+    "id": "30",
+    "title": "Sci-Fi Environment Architect 🚀",
+    "description": "Design futuristic sci-fi world prompts with high detail.",
+    "category": "Image Generation",
+    "prompt": "Act as a sci-fi concept art director.\n\nGenerate a futuristic environment prompt using:\n\nSetting Type: [CITY / SPACE / PLANET]\nTech Level: [LOW / HIGH / ULTRA]\nMood: [MOOD]\nColor Tone: [COLOR]\nLighting Style: [LIGHTING]\nAspect Ratio: [RATIO]\n\nStructure:\n\n1. World Description  \nDescribe architecture and tech elements.\n\n2. Atmosphere  \nAdd particles, haze, or energy effects.\n\n3. Lighting Design  \nSpecify neon, volumetric, or cinematic light.\n\n4. Detail Enhancers  \nAdd surface detail and realism cues.\n\n5. Final Prompt  \nProvide one optimized prompt.\n\nMake it feel futuristic and immersive.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["sci-fi", "futuristic", "environment"],
+    "tips": "Neon lighting and scale references improve sci-fi scenes."
+  },
+  {
+    "id": "31",
+    "title": "Children’s Book Illustration Maker 📚",
+    "description": "Create warm, expressive children's book illustration prompts.",
+    "category": "Image Generation",
+    "prompt": "You are a children's book art director.\n\nCreate an illustration prompt using:\n\nScene Description: [SCENE]\nMain Character: [CHARACTER]\nEmotion: [EMOTION]\nArt Style: [WATERCOLOR / CARTOON / etc]\nColor Mood: [PALETTE]\nAspect Ratio: [RATIO]\n\nProcess:\n\n1. Character Focus  \nDescribe expression and pose.\n\n2. Scene Setting  \nAdd friendly environmental details.\n\n3. Style Layer  \nApply children's book aesthetic.\n\n4. Texture & Finish  \nSpecify soft textures and warmth.\n\n5. Final Prompt  \nProvide one optimized prompt.\n\nKeep it charming and expressive.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["children", "illustration", "storybook"],
+    "tips": "Soft lighting and warm palettes work best."
+  },
+  {
+    "id": "32",
+    "title": "Abstract Art Prompt Generator 🎨",
+    "description": "Produce modern abstract art prompts with strong visual identity.",
+    "category": "Image Generation",
+    "prompt": "Act as a contemporary abstract artist.\n\nGenerate an abstract artwork prompt using:\n\nTheme: [THEME]\nEmotion: [EMOTION]\nColor Palette: [COLORS]\nStyle Influence: [STYLE]\nComplexity Level: [LOW / MEDIUM / HIGH]\nAspect Ratio: [RATIO]\n\nStructure:\n\n1. Visual Concept  \nDescribe shapes and composition.\n\n2. Motion & Energy  \nAdd flow and dynamic elements.\n\n3. Texture & Medium  \nSpecify paint, digital, or mixed media feel.\n\n4. Color Strategy  \nDefine palette harmony.\n\n5. Final Prompt  \nProvide one clean optimized prompt.\n\nAim for gallery-worthy modern abstraction.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["abstract", "modern", "art"],
+    "tips": "Limit palette to 2–4 colors for stronger visual impact."
+  },
+  {
+    "id": "33",
+    "title": "ATS-Optimized Resume Rewriter 📄",
+    "description": "Rewrite resumes to pass ATS filters while staying human-readable.",
+    "category": "Career",
+    "prompt": "Act as a senior resume strategist and ATS optimization expert.\n\nYour task is to rewrite and optimize the following resume:\n\nTarget Role: [ROLE]\nTarget Industry: [INDUSTRY]\nExperience Level: [LEVEL]\n\nResume Content:\n[PASTE RESUME]\n\nFollow this process:\n\nSTEP 1 — Gap Analysis  \nIdentify missing keywords, weak bullets, and structural issues.\n\nSTEP 2 — Keyword Strategy  \nExtract and incorporate high-impact ATS keywords naturally.\n\nSTEP 3 — Bullet Point Upgrade  \nRewrite experience bullets using:\n- Strong action verbs\n- Quantified impact\n- Clear outcomes\n\nSTEP 4 — Structure Optimization  \nEnsure clean ATS-friendly formatting.\n\nSTEP 5 — Final Resume Output  \nProvide the fully rewritten resume.\n\nRules:\n- No keyword stuffing\n- Prioritize measurable impact\n- Keep language professional and concise",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["resume", "ats", "job search"],
+    "tips": "Provide the actual job description for best keyword matching."
+  },
+  {
+    "id": "34",
+    "title": "Tailored Cover Letter Generator ✉️",
+    "description": "Create highly personalized cover letters aligned to a job posting.",
+    "category": "Career",
+    "prompt": "Act as an expert career copywriter.\n\nWrite a tailored cover letter using:\n\nJob Description: [PASTE JD]\nCandidate Background: [SUMMARY]\nCompany Name: [COMPANY]\nTone: [formal / confident / warm]\n\nStructure:\n\n1. Opening Hook  \nReference the role and show genuine interest.\n\n2. Value Alignment  \nConnect candidate strengths to job requirements.\n\n3. Impact Examples  \nHighlight 2–3 measurable achievements.\n\n4. Cultural Fit  \nExplain why the company specifically.\n\n5. Closing  \nProfessional and confident call to action.\n\nRules:\n- Avoid generic phrases\n- Be specific to the company\n- Keep under one page",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["cover letter", "application", "job"],
+    "tips": "Paste the full job description for best personalization."
+  },
+  {
+    "id": "35",
+    "title": "Mock Interview Simulator 🎤",
+    "description": "Generate realistic mock interview questions and coaching feedback.",
+    "category": "Career",
+    "prompt": "Act as a senior hiring manager conducting a realistic interview.\n\nRole: [ROLE]\nCompany Type: [STARTUP / ENTERPRISE]\nExperience Level: [LEVEL]\n\nFollow this flow:\n\nROUND 1 — Core Questions  \nAsk 5 high-probability interview questions.\n\nROUND 2 — Deep Dive  \nAsk 3 challenging follow-up questions.\n\nROUND 3 — Behavioral Section  \nAsk 3 STAR-format behavioral questions.\n\nROUND 4 — Evaluation Framework  \nExplain what strong vs weak answers look like.\n\nROUND 5 — Preparation Tips  \nProvide targeted improvement advice.\n\nKeep the tone realistic and professional.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["interview", "prep", "hiring"],
+    "tips": "Mention the specific company for more tailored questions."
+  },
+  {
+    "id": "36",
+    "title": "Career Path Strategist 🧭",
+    "description": "Map out high-leverage career growth paths with milestones.",
+    "category": "Career",
+    "prompt": "Act as a senior career strategist and industry advisor.\n\nProfile:\nCurrent Role: [ROLE]\nYears of Experience: [YEARS]\nSkills: [KEY SKILLS]\nCareer Goal: [GOAL]\n\nProduce:\n\n1. Current Position Assessment  \nEvaluate strengths and gaps.\n\n2. Career Path Options  \nProvide 3 realistic career trajectories.\n\n3. Skill Gap Analysis  \nList critical skills to develop.\n\n4. 12-Month Action Plan  \nProvide quarterly milestones.\n\n5. Risk Factors  \nHighlight potential blockers.\n\nBe practical and market-aware.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["career growth", "planning", "strategy"],
+    "tips": "Include your industry for more accurate guidance."
+  },
+  {
+    "id": "37",
+    "title": "LinkedIn Profile Optimizer 🔗",
+    "description": "Upgrade LinkedIn profiles for visibility and recruiter appeal.",
+    "category": "Career",
+    "prompt": "Act as a LinkedIn personal branding expert.\n\nOptimize the following profile:\n\nTarget Role: [ROLE]\nIndustry: [INDUSTRY]\nCurrent Headline: [HEADLINE]\nAbout Section: [ABOUT]\n\nGenerate:\n\n1. Headline Variants (5 options)\n2. Rewritten About Section\n3. Experience Bullet Improvements\n4. Keyword Suggestions\n5. Profile Strength Tips\n\nRules:\n- Make it recruiter-friendly\n- Avoid buzzword stuffing\n- Keep tone professional but human",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["linkedin", "personal brand", "networking"],
+    "tips": "Include your target role to improve keyword targeting."
+  },
+  {
+    "id": "38",
+    "title": "Salary Negotiation Coach 💰",
+    "description": "Prepare data-backed salary negotiation strategies.",
+    "category": "Career",
+    "prompt": "Act as a compensation negotiation expert.\n\nContext:\nRole: [ROLE]\nLocation: [LOCATION]\nExperience Level: [LEVEL]\nOffer Received: [SALARY]\n\nProvide:\n\n1. Market Position Estimate\n2. Negotiation Strategy\n3. Scripted Negotiation Message\n4. Counteroffer Range\n5. Risk Assessment\n\nRules:\n- Be realistic\n- Stay professional\n- Focus on win-win framing",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["salary", "negotiation", "offer"],
+    "tips": "Include full compensation details if available."
+  },
+  {
+    "id": "39",
+    "title": "Portfolio Project Generator 🧪",
+    "description": "Suggest high-impact portfolio projects tailored to career goals.",
+    "category": "Career",
+    "prompt": "Act as a hiring-focused portfolio advisor.\n\nProfile:\nTarget Role: [ROLE]\nCurrent Skills: [SKILLS]\nExperience Level: [LEVEL]\nIndustry: [INDUSTRY]\n\nProduce:\n\n1. Portfolio Gap Analysis\n2. 5 High-Impact Project Ideas\n3. One \"Standout\" Project Concept\n4. Suggested Tech/Tools\n5. Presentation Tips\n\nFocus on projects that impress real hiring managers.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["portfolio", "projects", "career"],
+    "tips": "Be honest about your current skill level."
+  },
+  {
+    "id": "40",
+    "title": "Behavioral Answer Builder ⭐",
+    "description": "Craft strong STAR-format interview answers.",
+    "category": "Career",
+    "prompt": "Act as an interview coach specializing in behavioral interviews.\n\nQuestion: [INTERVIEW QUESTION]\nCandidate Experience: [CONTEXT]\n\nGenerate:\n\n1. STAR-structured answer\n2. Strong opening sentence\n3. Quantified impact improvements\n4. Alternative shorter version\n5. Delivery tips\n\nRules:\n- Keep it authentic\n- Include measurable outcomes\n- Maintain confident tone",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["behavioral", "STAR", "interview"],
+    "tips": "Provide real experience details for best authenticity."
+  },
+  {
+    "id": "41",
+    "title": "Career Pivot Planner 🔄",
+    "description": "Design a realistic transition plan into a new career field.",
+    "category": "Career",
+    "prompt": "Act as a career transition strategist.\n\nCurrent Field: [CURRENT]\nTarget Field: [TARGET]\nTransferable Skills: [SKILLS]\nTime Horizon: [TIMEFRAME]\n\nProvide:\n\n1. Transition Feasibility\n2. Transferable Skill Mapping\n3. Skill Gaps to Close\n4. Step-by-Step Pivot Plan\n5. First Opportunities to Target\n\nBe realistic and actionable.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["career change", "pivot", "strategy"],
+    "tips": "Include your time availability for more accurate planning."
+  },
+  {
+    "id": "42",
+    "title": "Recruiter Outreach Message Writer 📬",
+    "description": "Craft concise, high-response recruiter outreach messages.",
+    "category": "Career",
+    "prompt": "Act as a recruiter-savvy networking strategist.\n\nWrite a short outreach message using:\n\nTarget Role: [ROLE]\nYour Background: [SUMMARY]\nRecipient Type: [RECRUITER / HIRING MANAGER]\nTone: [POLITE / CONFIDENT]\n\nGenerate:\n\n1. Primary outreach message\n2. Short follow-up message\n3. Subject line options (if email)\n4. Personalization tips\n\nRules:\n- Keep under 120 words\n- Be respectful and direct\n- Avoid sounding desperate",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["networking", "outreach", "recruiter"],
+    "tips": "Mention a specific company or role for better response rates."
   }
 ]
+
