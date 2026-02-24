@@ -17,4 +17,5 @@ export type Category =
   | "Business"
   | "Marketing"
   | "Career"
-  | "Creative";
+  | "Creative"
+  | "Productivity";

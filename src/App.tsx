@@ -11,7 +11,7 @@ import MobileFilterSheet from './components/MobileFilterSheet';
 import promptsData from './data/prompts.json';
 import { Prompt, Category } from './types';
 import { AnimatePresence, motion } from 'motion/react';
-import { Filter } from 'lucide-react';
+import { Filter, ChevronDown, ChevronUp } from 'lucide-react';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -29,13 +29,15 @@ function App() {
   const [selectedPrompt, setSelectedPrompt] = useState<Prompt | null>(null);
   const [toastVisible, setToastVisible] = useState(false);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [isDesktopFilterOpen, setIsDesktopFilterOpen] = useState(false);
 
   useEffect(() => {
+    const root = window.document.documentElement;
     if (darkMode) {
-      document.documentElement.classList.add('dark');
+      root.classList.add('dark');
       localStorage.setItem('theme', 'dark');
     } else {
-      document.documentElement.classList.remove('dark');
+      root.classList.remove('dark');
       localStorage.setItem('theme', 'light');
     }
   }, [darkMode]);
@@ -57,6 +59,7 @@ function App() {
     'Marketing',
     'Career',
     'Creative',
+    'Productivity',
   ];
 
   const allPrompts = promptsData as unknown as Prompt[];
@@ -131,17 +134,50 @@ function App() {
           </button>
         </div>
 
+        {/* Desktop Filter Toggle */}
+        <div className="hidden lg:flex justify-center mb-6">
+          <button
+            onClick={() => setIsDesktopFilterOpen(!isDesktopFilterOpen)}
+            className={`flex items-center gap-2 px-4 py-2 rounded-full border text-sm font-medium transition-all shadow-sm ${
+              isDesktopFilterOpen || selectedAgents.length > 0 || selectedTags.length > 0
+                ? 'bg-indigo-50 dark:bg-indigo-900/20 border-indigo-200 dark:border-indigo-800 text-indigo-700 dark:text-indigo-300'
+                : 'bg-white dark:bg-slate-800 border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 hover:border-indigo-300 dark:hover:border-indigo-700'
+            }`}
+          >
+            <Filter className="w-4 h-4" />
+            Advanced Filters
+            {(selectedAgents.length > 0 || selectedTags.length > 0) && (
+              <span className="ml-1 px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 text-xs">
+                {selectedAgents.length + selectedTags.length}
+              </span>
+            )}
+            {isDesktopFilterOpen ? <ChevronUp className="w-4 h-4 ml-1" /> : <ChevronDown className="w-4 h-4 ml-1" />}
+          </button>
+        </div>
+
         {/* Desktop Filter Bar */}
         <div className="hidden lg:block">
-          <FilterBar
-            agents={allAgents}
-            tags={allTags}
-            selectedAgents={selectedAgents}
-            selectedTags={selectedTags}
-            onToggleAgent={toggleAgent}
-            onToggleTag={toggleTag}
-            onClearFilters={clearFilters}
-          />
+          <AnimatePresence>
+            {isDesktopFilterOpen && (
+              <motion.div
+                initial={{ height: 0, opacity: 0 }}
+                animate={{ height: 'auto', opacity: 1 }}
+                exit={{ height: 0, opacity: 0 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="overflow-hidden"
+              >
+                <FilterBar
+                  agents={allAgents}
+                  tags={allTags}
+                  selectedAgents={selectedAgents}
+                  selectedTags={selectedTags}
+                  onToggleAgent={toggleAgent}
+                  onToggleTag={toggleTag}
+                  onClearFilters={clearFilters}
+                />
+              </motion.div>
+            )}
+          </AnimatePresence>
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
