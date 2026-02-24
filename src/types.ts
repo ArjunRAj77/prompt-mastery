@@ -3,7 +3,7 @@ export interface Prompt {
   title: string;
   description: string;
   category: string;
-  content: string;
+  prompt: string;
   agents: string[];
   tags: string[];
   tips: string;

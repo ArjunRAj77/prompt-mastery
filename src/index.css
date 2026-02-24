@@ -1,47 +1,54 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
 @import "tailwindcss";
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-bg-light: #F7F7FA;
+  --color-surface-light: #FFFFFF;
+  --color-primary-light: #6C5CE7;
+  --color-secondary-light: #00BFA6;
+  --color-text-primary-light: #0F172A;
+  --color-text-secondary-light: #64748B;
+
+  --color-bg-dark: #0B0F19;
+  --color-surface-dark: #111827;
+  --color-primary-dark: #8B7CFF;
+  --color-glow-dark: #22D3EE;
+  --color-text-primary-dark: #E5E7EB;
+  --color-text-secondary-dark: #9CA3AF;
 }
 
 @layer base {
   body {
-    @apply bg-slate-50 text-slate-900 antialiased font-sans transition-colors duration-300;
+    @apply bg-[#F7F7FA] text-[#0F172A] antialiased font-sans transition-colors duration-300;
   }
 
   body.dark {
-    @apply bg-slate-950 text-slate-50;
+    @apply bg-[#0B0F19] text-[#E5E7EB];
   }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/70 backdrop-blur-lg border border-white/20 shadow-sm;
-  }
-  
-  .dark .glass {
-    @apply bg-slate-900/70 border-white/10 shadow-none;
+    @apply bg-white/70 dark:bg-[#111827]/70 backdrop-blur-md border border-white/20 dark:border-white/5 shadow-sm;
   }
 
   .glass-card {
-    @apply bg-white/50 backdrop-blur-md border border-white/30 shadow-sm hover:shadow-md transition-all duration-300;
-  }
-
-  .dark .glass-card {
-    @apply bg-slate-800/50 border-white/5 hover:bg-slate-800/70;
+    @apply bg-white/60 dark:bg-[#111827]/60 backdrop-blur-sm border border-white/40 dark:border-white/5 shadow-sm hover:shadow-lg transition-all duration-300;
   }
   
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-indigo-500 to-purple-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-[#6C5CE7] to-[#00BFA6];
   }
   
   .dark .text-gradient {
-    @apply from-indigo-400 to-purple-400;
+    @apply from-[#8B7CFF] to-[#22D3EE];
   }
 
   .glass-icon {
-    @apply flex items-center justify-center bg-white/30 dark:bg-slate-800/30 backdrop-blur-md border border-white/20 dark:border-white/10 shadow-sm rounded-xl;
+    @apply flex items-center justify-center bg-white/40 dark:bg-[#111827]/40 backdrop-blur-md border border-white/30 dark:border-white/10 shadow-sm rounded-xl;
   }
 }

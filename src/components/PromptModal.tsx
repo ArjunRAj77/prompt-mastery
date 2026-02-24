@@ -58,10 +58,10 @@ export default function PromptModal({ prompt, isOpen, onClose, onCopy }: PromptM
 
                 <div className="bg-slate-50 dark:bg-slate-950 rounded-xl border border-slate-200 dark:border-slate-800 p-4 mb-6 relative group">
                   <pre className="font-mono text-sm text-slate-800 dark:text-slate-200 whitespace-pre-wrap break-words leading-relaxed">
-                    {prompt.content}
+                    {prompt.prompt}
                   </pre>
                   <button
-                    onClick={() => onCopy(prompt.content)}
+                    onClick={() => onCopy(prompt.prompt)}
                     className="absolute top-3 right-3 p-2 rounded-lg bg-white dark:bg-slate-800 text-slate-500 hover:text-indigo-600 dark:hover:text-indigo-400 shadow-sm border border-slate-200 dark:border-slate-700 opacity-0 group-hover:opacity-100 transition-all duration-200"
                     title="Copy to clipboard"
                   >
@@ -127,8 +127,8 @@ export default function PromptModal({ prompt, isOpen, onClose, onCopy }: PromptM
                   Close
                 </button>
                 <button
-                  onClick={() => onCopy(prompt.content)}
-                  className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 font-medium text-sm shadow-sm shadow-indigo-500/20 transition-colors flex items-center gap-2"
+                  onClick={() => onCopy(prompt.prompt)}
+                  className="px-4 py-2 rounded-lg bg-indigo-600 text-white hover:bg-indigo-700 font-medium text-sm shadow-sm shadow-indigo-500/20 transition-colors flex items-center gap-2 active:scale-95"
                 >
                   <Copy className="w-4 h-4" />
                   Copy Prompt

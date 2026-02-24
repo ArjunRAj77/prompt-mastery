@@ -46,15 +46,15 @@ const PromptCard: React.FC<PromptCardProps> = ({ prompt, onCopy, onViewDetails, 
 
       <div className="flex items-center gap-3 mt-auto pt-4 border-t border-slate-100 dark:border-slate-700/50">
         <button
-          onClick={() => onCopy(prompt.content)}
-          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group/btn"
+          onClick={() => onCopy(prompt.prompt)}
+          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-200 text-sm font-medium hover:bg-slate-100 dark:hover:bg-slate-700 transition-colors group/btn active:scale-95"
         >
           <Copy className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
           Copy
         </button>
         <button
           onClick={() => onViewDetails(prompt)}
-          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition-colors shadow-sm shadow-indigo-500/20 group/btn"
+          className="flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-indigo-600 text-white text-sm font-medium hover:bg-indigo-700 transition-colors shadow-sm shadow-indigo-500/20 group/btn active:scale-95"
         >
           <ExternalLink className="w-4 h-4 group-hover/btn:scale-110 transition-transform" />
           View

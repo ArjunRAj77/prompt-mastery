@@ -35,7 +35,7 @@ export default function Header({ darkMode, toggleTheme, searchQuery, setSearchQu
             P
           </div>
           <span className="font-display font-bold text-xl tracking-tight text-slate-900 dark:text-white">
-            Prompt Master
+            Prompt Mastery
           </span>
         </div>
 

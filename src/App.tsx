@@ -6,9 +6,12 @@ import PromptCard from './components/PromptCard';
 import PromptModal from './components/PromptModal';
 import Toast from './components/Toast';
 import Footer from './components/Footer';
+import FilterBar from './components/FilterBar';
+import MobileFilterSheet from './components/MobileFilterSheet';
 import promptsData from './data/prompts.json';
 import { Prompt, Category } from './types';
 import { AnimatePresence, motion } from 'motion/react';
+import { Filter } from 'lucide-react';
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -21,8 +24,11 @@ function App() {
 
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
+  const [selectedAgents, setSelectedAgents] = useState<string[]>([]);
+  const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [selectedPrompt, setSelectedPrompt] = useState<Prompt | null>(null);
   const [toastVisible, setToastVisible] = useState(false);
+  const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
 
   useEffect(() => {
     if (darkMode) {
@@ -55,6 +61,10 @@ function App() {
 
   const allPrompts = promptsData as unknown as Prompt[];
 
+  // Extract unique agents and tags
+  const allAgents = useMemo(() => Array.from(new Set(allPrompts.flatMap(p => p.agents))), [allPrompts]);
+  const allTags = useMemo(() => Array.from(new Set(allPrompts.flatMap(p => p.tags))), [allPrompts]);
+
   const filteredPrompts = useMemo(() => {
     return allPrompts.filter((prompt) => {
       const matchesCategory = selectedCategory === 'All' || prompt.category === selectedCategory;
@@ -62,12 +72,33 @@ function App() {
         prompt.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prompt.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
         prompt.tags.some((tag) => tag.toLowerCase().includes(searchQuery.toLowerCase()));
-      return matchesCategory && matchesSearch;
+      
+      const matchesAgents = selectedAgents.length === 0 || selectedAgents.some(agent => prompt.agents.includes(agent));
+      const matchesTags = selectedTags.length === 0 || selectedTags.some(tag => prompt.tags.includes(tag));
+
+      return matchesCategory && matchesSearch && matchesAgents && matchesTags;
     });
-  }, [selectedCategory, searchQuery]);
+  }, [selectedCategory, searchQuery, selectedAgents, selectedTags, allPrompts]);
+
+  const toggleAgent = (agent: string) => {
+    setSelectedAgents(prev => 
+      prev.includes(agent) ? prev.filter(a => a !== agent) : [...prev, agent]
+    );
+  };
+
+  const toggleTag = (tag: string) => {
+    setSelectedTags(prev => 
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag]
+    );
+  };
+
+  const clearFilters = () => {
+    setSelectedAgents([]);
+    setSelectedTags([]);
+  };
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300 font-sans selection:bg-indigo-500/30">
+    <div className="min-h-screen bg-[#F7F7FA] dark:bg-[#0B0F19] transition-colors duration-300 font-sans selection:bg-indigo-500/30">
       <Header
         darkMode={darkMode}
         toggleTheme={toggleTheme}
@@ -83,6 +114,35 @@ function App() {
           selectedCategory={selectedCategory}
           onSelectCategory={setSelectedCategory}
         />
+
+        {/* Mobile Filter Toggle */}
+        <div className="lg:hidden px-4 mb-6">
+          <button
+            onClick={() => setIsMobileFilterOpen(true)}
+            className="w-full flex items-center justify-center gap-2 px-4 py-3 rounded-xl bg-white dark:bg-slate-800 border border-slate-200 dark:border-slate-700 text-slate-600 dark:text-slate-300 font-medium shadow-sm"
+          >
+            <Filter className="w-4 h-4" />
+            Advanced Filters
+            {(selectedAgents.length > 0 || selectedTags.length > 0) && (
+              <span className="ml-1 px-2 py-0.5 rounded-full bg-indigo-100 dark:bg-indigo-900/50 text-indigo-600 dark:text-indigo-400 text-xs">
+                {selectedAgents.length + selectedTags.length}
+              </span>
+            )}
+          </button>
+        </div>
+
+        {/* Desktop Filter Bar */}
+        <div className="hidden lg:block">
+          <FilterBar
+            agents={allAgents}
+            tags={allTags}
+            selectedAgents={selectedAgents}
+            selectedTags={selectedTags}
+            onToggleAgent={toggleAgent}
+            onToggleTag={toggleTag}
+            onClearFilters={clearFilters}
+          />
+        </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
           <AnimatePresence mode='wait'>
@@ -131,8 +191,20 @@ function App() {
         onCopy={handleCopy}
       />
 
+      <MobileFilterSheet
+        isOpen={isMobileFilterOpen}
+        onClose={() => setIsMobileFilterOpen(false)}
+        agents={allAgents}
+        tags={allTags}
+        selectedAgents={selectedAgents}
+        selectedTags={selectedTags}
+        onToggleAgent={toggleAgent}
+        onToggleTag={toggleTag}
+        onClearFilters={clearFilters}
+      />
+
       <Toast
-        message="Copied to clipboard!"
+        message="Copied to clipboard ✓"
         isVisible={toastVisible}
         onClose={() => setToastVisible(false)}
       />
