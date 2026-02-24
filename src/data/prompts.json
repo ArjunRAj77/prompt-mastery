@@ -1,0 +1,102 @@
+[
+  {
+    "id": "1",
+    "title": "SEO Blog Post Generator",
+    "description": "Generate high-ranking, SEO-optimized blog posts with proper structure and keyword integration.",
+    "category": "Content Writing",
+    "content": "Write a comprehensive, SEO-optimized blog post about [TOPIC]. \n\nTarget Audience: [AUDIENCE]\nKeywords to include: [KEYWORDS]\n\nStructure:\n1. Catchy Headline (H1)\n2. Engaging Introduction (hook the reader)\n3. Key Takeaways (bullet points)\n4. Detailed Body Paragraphs (use H2 and H3 subheadings)\n5. FAQ Section\n6. Conclusion with Call-to-Action\n\nTone: Professional yet accessible.\nLength: 1500 words.",
+    "agents": ["ChatGPT", "Claude", "Gemini"],
+    "tags": ["SEO", "Blogging", "Marketing"],
+    "tips": "Be specific about the target audience for better tone matching."
+  },
+  {
+    "id": "2",
+    "title": "React Component Architect",
+    "description": "Create robust, accessible, and typed React components with best practices.",
+    "category": "Coding",
+    "content": "Act as a Senior React Developer. Create a [COMPONENT_NAME] component using React, TypeScript, and Tailwind CSS.\n\nRequirements:\n- Fully typed props interface\n- Accessibility compliance (ARIA attributes)\n- Responsive design using Tailwind classes\n- Error handling where appropriate\n- Clean, modular code structure\n\nInclude usage examples and explain any complex logic.",
+    "agents": ["Claude", "ChatGPT", "Gemini"],
+    "tags": ["React", "TypeScript", "Tailwind"],
+    "tips": "Specify if you need client-side or server-side rendering considerations."
+  },
+  {
+    "id": "3",
+    "title": "Cinematic Midjourney Prompt",
+    "description": "Generate photorealistic, cinematic image prompts for Midjourney v6.",
+    "category": "Image Generation",
+    "content": "Create a detailed Midjourney v6 prompt for the following concept: [CONCEPT].\n\nInclude details for:\n- Subject appearance and pose\n- Lighting (e.g., volumetric, golden hour, cinematic)\n- Camera angle and lens type (e.g., 35mm, wide-angle)\n- Environment and background\n- Art style (e.g., photorealistic, cyberpunk, oil painting)\n- Aspect ratio (--ar 16:9)\n\nFormat the output as a single copy-pasteable code block.",
+    "agents": ["Midjourney", "DALL-E 3"],
+    "tags": ["Art", "Photography", "Visuals"],
+    "tips": "Use specific camera lens descriptions for more realistic results."
+  },
+  {
+    "id": "4",
+    "title": "Startup Pitch Deck Outliner",
+    "description": "Structure a compelling pitch deck for investors.",
+    "category": "Business",
+    "content": "Create a 10-slide pitch deck outline for a startup in the [INDUSTRY] industry.\n\nStartup Name: [NAME]\nProblem Solved: [PROBLEM]\nUnique Value Proposition: [UVP]\n\nFor each slide, provide:\n1. Slide Title\n2. Key Talking Points\n3. Suggested Visuals/Charts\n\nEnsure the narrative flows logically from problem to solution to market opportunity.",
+    "agents": ["ChatGPT", "Claude"],
+    "tags": ["Startup", "Investment", "Presentation"],
+    "tips": "Provide as much detail about your business model as possible."
+  },
+  {
+    "id": "5",
+    "title": "Email Marketing Sequence",
+    "description": "Draft a high-converting email drip campaign for new subscribers.",
+    "category": "Marketing",
+    "content": "Write a 5-email welcome sequence for new subscribers to [NEWSLETTER/PRODUCT].\n\nGoal: Convert free subscribers to paid customers.\n\nEmail 1: Welcome & Value Delivery\nEmail 2: Problem Agitation & Storytelling\nEmail 3: Social Proof & Case Studies\nEmail 4: Soft Sell & Benefits\nEmail 5: Hard Sell & Urgency\n\nTone: Persuasive, empathetic, and urgent but not spammy.",
+    "agents": ["ChatGPT", "Gemini", "Claude"],
+    "tags": ["Email", "Copywriting", "Sales"],
+    "tips": "Define the 'One Big Idea' for your campaign before starting."
+  },
+  {
+    "id": "6",
+    "title": "Resume Bullet Point Enhancer",
+    "description": "Transform weak resume points into impact-driven achievements.",
+    "category": "Career",
+    "content": "Rewrite the following resume bullet points to be more impactful, using the 'Action Verb + Task + Result' formula.\n\nOriginal Points:\n[PASTE_POINTS_HERE]\n\nFocus on quantifying results (numbers, percentages) where possible. Use strong action verbs. Tailor the language for a [TARGET_JOB_TITLE] role.",
+    "agents": ["ChatGPT", "Claude"],
+    "tags": ["Resume", "Job Search", "Professional"],
+    "tips": "Paste the job description for even better alignment."
+  },
+  {
+    "id": "7",
+    "title": "Creative Story Starter",
+    "description": "Overcome writer's block with unique story concepts and opening lines.",
+    "category": "Creative",
+    "content": "Generate 5 unique story concepts based on the genre: [GENRE].\n\nFor each concept, provide:\n1. A one-sentence logline\n2. A gripping opening paragraph\n3. A potential plot twist\n\nThemes to explore: [THEMES].",
+    "agents": ["Claude", "ChatGPT"],
+    "tags": ["Fiction", "Writing", "Brainstorming"],
+    "tips": "Mix genres for more interesting results (e.g., Sci-Fi Western)."
+  },
+  {
+    "id": "8",
+    "title": "Python Data Analysis Script",
+    "description": "Generate a Python script for analyzing CSV data using Pandas.",
+    "category": "Coding",
+    "content": "Write a Python script using Pandas to analyze a CSV file named 'data.csv'.\n\nThe script should:\n1. Load the data\n2. Clean missing values (fill with mean for numeric, mode for categorical)\n3. Perform exploratory data analysis (summary statistics)\n4. Generate a correlation matrix\n5. Create a visualization using Matplotlib/Seaborn for [SPECIFIC_METRIC]\n\nComment the code heavily for a beginner.",
+    "agents": ["ChatGPT", "Gemini", "Code Llama"],
+    "tags": ["Python", "Data Science", "Pandas"],
+    "tips": "Describe your dataset columns for more accurate code."
+  },
+  {
+    "id": "9",
+    "title": "LinkedIn Thought Leadership Post",
+    "description": "Write a viral-style LinkedIn post about a professional insight.",
+    "category": "Marketing",
+    "content": "Draft a LinkedIn post about [TOPIC].\n\nStructure:\n- Hook: A controversial or surprising statement.\n- Body: Personal story or observation backing up the hook.\n- Lesson: The professional insight or takeaway.\n- Call to Action: Question to encourage comments.\n\nFormatting: Use short paragraphs and line breaks for readability. Add 3-5 relevant hashtags.",
+    "agents": ["ChatGPT", "Claude"],
+    "tags": ["Social Media", "Personal Branding", "LinkedIn"],
+    "tips": "Share a personal failure or success story for authenticity."
+  },
+  {
+    "id": "10",
+    "title": "Executive Summary Synthesizer",
+    "description": "Condense long reports into a concise executive summary.",
+    "category": "Business",
+    "content": "Summarize the following text into a one-page Executive Summary.\n\nText: [PASTE_TEXT_HERE]\n\nSections required:\n1. Overview\n2. Key Findings\n3. Risks & Challenges\n4. Recommendations\n\nKeep it concise, professional, and suitable for C-level executives.",
+    "agents": ["Claude", "Gemini"],
+    "tags": ["Summary", "Management", "Productivity"],
+    "tips": "Indicate the maximum word count if needed."
+  }
+]
